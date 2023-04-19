@@ -8,13 +8,9 @@ public class Health : MonoBehaviour
     private int currentHealth;
     public int MaxHealth;
 
-    public TextMeshProUGUI healthText;
-
     private void Start()
     {
-        currentHealth = MaxHealth;
-        healthText.text = currentHealth.ToString();
-       
+        currentHealth = MaxHealth;  
     }
 
     public void TakeDamage(int damage)
@@ -23,9 +19,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            currentHealth = MaxHealth;
-           
+            Destroy(gameObject);     
         }
-        healthText.text = currentHealth.ToString();
     }
 }

@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class DamageMaker : MonoBehaviour
 {
-    public int Damage;
-    public bool Permanent = true;
+    public int damage;
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnMouseEnter(Collider2D collision)
     {
         Health health = collision.GetComponent<Health>();
         if (health != null)
         {
-            health.TakeDamage(Damage);
-            if (!Permanent)
-            {
-                Destroy(gameObject);
-            }
+            health.TakeDamage(damage);
         }
-
     }
 }

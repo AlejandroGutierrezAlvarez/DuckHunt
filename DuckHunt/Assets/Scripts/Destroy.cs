@@ -12,5 +12,16 @@ public class Destroy : MonoBehaviour
         
     }
 
+    private void OnMouseDown()
+    {
+        Debug.Log("click en el pato");
+
+    }
+
+    public void DestroyDuck()
+    {
+        Destroy(gameObject);
+    }
+
 
 }
